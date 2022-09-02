@@ -1,0 +1,1 @@
+KERNEL=="ttyUSB*",ATTRS{idVendor}=="1a86",ATTRS{idProduct}=="7523",GROUP="users",MODE="0777",SYMLINK+="rikibase"

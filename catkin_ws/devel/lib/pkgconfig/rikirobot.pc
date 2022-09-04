@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/devel
+
+Name: rikirobot
+Description: Description of rikirobot
+Version: 1.0.0
+Cflags: -I/home/haopi3/rikirobot/catkin_ws/src/rikirobot_project/rikirobot/include
+Libs: -L${prefix}/lib -lrikirobot
+Requires: roscpp rospy tf nav_msgs riki_msgs geometry_msgs sensor_msgs std_msgs

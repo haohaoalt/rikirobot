@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/devel
+
+Name: depthimage_to_laserscan
+Description: Description of depthimage_to_laserscan
+Version: 1.0.7
+Cflags: -I/home/haopi3/rikirobot/catkin_ws/devel/include -I/home/haopi3/rikirobot/catkin_ws/src/depth_camera/depthimage_to_laserscan/include
+Libs: -L${prefix}/lib -lDepthImageToLaserScan -lDepthImageToLaserScanROS -lDepthImageToLaserScanNodelet
+Requires: dynamic_reconfigure image_geometry image_transport nodelet roscpp sensor_msgs

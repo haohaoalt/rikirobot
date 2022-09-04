@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/install
+
+Name: jpeg_streamer
+Description: Description of jpeg_streamer
+Version: 0.2.5
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

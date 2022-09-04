@@ -52,7 +52,7 @@ sudo apt-get install ros-kinetic-amcl
 sudo apt-get install ros-kinetic-frontier-exploration
 sudo apt-get install ros-kinetic-hector-slam
 
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+echo "source ~/rikirobot/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo usermod -aG dialout $USER

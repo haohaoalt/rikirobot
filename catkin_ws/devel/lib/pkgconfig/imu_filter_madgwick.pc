@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/devel
+
+Name: imu_filter_madgwick
+Description: Description of imu_filter_madgwick
+Version: 1.1.6
+Cflags: -I/home/haopi3/rikirobot/catkin_ws/devel/include -I/usr/include
+Libs: -L${prefix}/lib -limu_filter -limu_filter_nodelet /usr/lib/arm-linux-gnueabihf/libboost_system.so /usr/lib/arm-linux-gnueabihf/libboost_thread.so /usr/lib/arm-linux-gnueabihf/libboost_signals.so /usr/lib/arm-linux-gnueabihf/libboost_chrono.so /usr/lib/arm-linux-gnueabihf/libboost_date_time.so /usr/lib/arm-linux-gnueabihf/libboost_atomic.so /usr/lib/arm-linux-gnueabihf/libpthread.so
+Requires: roscpp sensor_msgs geometry_msgs tf2_ros tf2_geometry_msgs nodelet pluginlib message_filters dynamic_reconfigure

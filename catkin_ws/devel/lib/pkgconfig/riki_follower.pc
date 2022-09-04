@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/devel
+
+Name: riki_follower
+Description: Description of riki_follower
+Version: 2.3.7
+Cflags: -I/home/haopi3/rikirobot/catkin_ws/devel/include
+Libs: -L${prefix}/lib -lriki_follower
+Requires: nodelet roscpp visualization_msgs depth_image_proc dynamic_reconfigure

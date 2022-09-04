@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/install
+
+Name: frontier_exploration
+Description: Description of frontier_exploration
+Version: 0.3.1
+Cflags: -I${prefix}/include -I/usr/include/pcl-1.7 -I/usr/include/eigen3 -I/usr/include
+Libs: -L${prefix}/lib -lexplore_costmap /usr/lib/arm-linux-gnueabihf/libpcl_common.so /usr/lib/arm-linux-gnueabihf/libboost_system.so /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so /usr/lib/arm-linux-gnueabihf/libboost_thread.so /usr/lib/arm-linux-gnueabihf/libboost_date_time.so /usr/lib/arm-linux-gnueabihf/libboost_iostreams.so /usr/lib/arm-linux-gnueabihf/libboost_serialization.so /usr/lib/arm-linux-gnueabihf/libboost_chrono.so /usr/lib/arm-linux-gnueabihf/libboost_atomic.so /usr/lib/arm-linux-gnueabihf/libboost_regex.so /usr/lib/arm-linux-gnueabihf/libpthread.so
+Requires: costmap_2d dynamic_reconfigure geometry_msgs roscpp tf actionlib

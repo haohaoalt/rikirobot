@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="riki_pid" pkg="riki_pid" type="riki_pid">
+  <param name="p" type="double" value="0.1" />
+  <param name="d" type="double" value="0.2" />
+  <param name="i" type="double" value="0.2" />
+</node>
+\endverbatim
+

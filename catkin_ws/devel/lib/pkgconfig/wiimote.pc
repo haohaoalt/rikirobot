@@ -1,0 +1,8 @@
+prefix=/home/haopi3/rikirobot/catkin_ws/devel
+
+Name: wiimote
+Description: Description of wiimote
+Version: 1.12.0
+Cflags: -I/home/haopi3/rikirobot/catkin_ws/devel/include -I/home/haopi3/rikirobot/catkin_ws/src/teleop/joystick_drivers/wiimote/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs sensor_msgs std_msgs std_srvs rospy roscpp roslib genmsg

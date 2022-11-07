@@ -1,3 +1,0 @@
-repository='https://github.com/orbbec/OpenNI2.git'
-module=''
-tag=''

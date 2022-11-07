@@ -1,8 +1,0 @@
-prefix=/home/haopi3/rikirobot/catkin_ws/install
-
-Name: ydlidar
-Description: Description of ydlidar
-Version: 1.2.3
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

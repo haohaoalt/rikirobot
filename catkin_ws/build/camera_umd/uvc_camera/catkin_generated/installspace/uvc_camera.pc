@@ -1,8 +1,0 @@
-prefix=/home/haopi3/rikirobot/catkin_ws/install
-
-Name: uvc_camera
-Description: Description of uvc_camera
-Version: 0.2.5
-Cflags: 
-Libs: -L${prefix}/lib -lnodelet_uvc_camera
-Requires: roscpp nodelet sensor_msgs

@@ -1,8 +1,0 @@
-prefix=/home/haopi3/rikirobot/catkin_ws/install
-
-Name: spacenav_node
-Description: Description of spacenav_node
-Version: 1.12.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp geometry_msgs sensor_msgs

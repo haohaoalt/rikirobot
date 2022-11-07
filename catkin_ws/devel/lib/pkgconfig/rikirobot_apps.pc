@@ -1,8 +1,0 @@
-prefix=/home/haopi3/rikirobot/catkin_ws/devel
-
-Name: rikirobot_apps
-Description: Description of rikirobot_apps
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

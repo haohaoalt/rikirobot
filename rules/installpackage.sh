@@ -14,14 +14,19 @@ sudo apt-get install python-gudev
 sudo apt-get install -y avahi-daemon
 sudo apt-get install -y openssh-server
 sudo apt-get install -y arduino-core
-sudo easy_install pip
-sudo pip install -U platformio
-sudo rm -rf ~/.platformio/
+echo "sudo easy_install pip"
+echo "sudo pip install -U platformio"
+echo "sudo rm -rf ~/.platformio/"
 
 ver=$(rosversion -d)
-sudo apt-get install -y libusb-dev libspnav-dev  libbluetooth-dev libcwiid-dev
-sudo apt-get install -y git vim
-sudo pip install pybluez
+sudo apt-get install libusb-dev
+sudo apt-get install libspnav-dev
+sudo apt-get install libbluetooth3=5.37-0ubuntu5.3
+sudo apt-get install libbluetooth-dev
+sudo apt-get install libcwiid-dev
+sudo apt-get install git 
+sudo apt-get install vim
+echo "sudo pip install pybluez"
 sudo apt-get install -y libv4l-dev 
 sudo apt-get install -y build-essential
 sudo apt-get install -y chrony

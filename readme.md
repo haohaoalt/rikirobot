@@ -35,18 +35,57 @@ cd ..
 ```
 
 为了防止树莓派编译卡死,更改部分系统参数确保编译成功
+
+第一步：确保系统中有足够的空间来用做swap交换空间，我准备在一个独立的文件系统中添加一个swap交换文件，在/opt/image中添加2G的swap交换文件
 ```
-cd /opt/
 sudo mkdir image
 sudo touch swap
+```
+ 第二步：添加交换文件并设置其大小为2G，使用如下命令
+```
 sudo dd if=/dev/zero of=/opt/image/swap bs=1024 count=2048000
 ```
-
-```cpp
+ 过段时间就返回如下结果：
+ ```
+2048000+0 records in
+2048000+0 records out
+2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB/s
+```
+第三步：创建（设置）交换空间，使用命令mkswap
+```
 sudo mkswap /opt/image/swap
+```
+Setting up swapspace version 1, size = 2 GiB (2097147904 bytes)
+
+第四步：检查现有的交换空间大小，使用命令free
+```
 free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         185          28          14         711         660
+Swap:             0           0           0
+```
+或者检查meminfo文件
+```
+grep SwapTotal  /proc/meminfo
+```
+第五步：启动新增加的2G的交换空间，使用命令swapon
+```
 sudo swapon /opt/image/swap
-sudo gedit /etc/fstab   
+```
+第六步:确认新增加的2G交换空间已经生效，使用命令free
+```
+free -m
+             total        used        free      shared  buff/cache   available
+Mem:            925         328          56          32         541         502
+Swap:          1999           0        1999
+```
+或者检查meminfo文件
+```
+grep SwapTotal  /proc/meminfo
+```
+第七步：修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效
+```cpp
+sudo gedit /etc/fstab
 /*
 在打开文件最后一行添加 
 /opt/image/swap   /swap   swap  defaults 0  0
@@ -64,7 +103,6 @@ sudo service ntp restart  //重启ntp服务
 cd /home/rikirobot/catkin_ws
 catkin_make -j1
 ```
-
 
 ```
 git push -u

@@ -8,7 +8,7 @@ sudo rm /var/lib/dpkg/lock
 sudo apt-get update
 sudo apt-get install gedit
 sudo apt-get install git
-wget http://fishros.com/install -O fishros && . fishro
+wget http://fishros.com/install -O fishros && . fishros
 
 ```
 or

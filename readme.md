@@ -6,9 +6,17 @@
 
 选课课号：(2022-2023-1)-ELEA3054-10N001-1
 
-本课程指导老师：陈良、余雷
+本课程长期支持文档地址：https://github.com/haohaoalt/rikirobot/blob/main/readme.md
 
-2022年助教TAs(Teaching assistants): 马健、钱洲同、陈星、姚远、赵晨希、圣传柳、叶成岩、刘泽亮、张昊
+本课程指导老师：余雷、陈良
+
+本课程先修知识：
+
+ubuntu简单使用，ROS基本认知（可花短时间快速入门，也可直接做需要多一点认真与耐心）
+
+2022年助教TAs(Teaching assistants): 
+
+马健、钱洲同、陈星、姚远、赵晨希、圣传柳、叶成岩、刘泽亮、张昊
 
 **课程安排：**
 
@@ -23,21 +31,14 @@
 
 **课程考核办法：**
 
-**日常考勤及值日：10‘**
+| 组成               | 分值   | 办法                                                         |
+| ------------------ | ------ | ------------------------------------------------------------ |
+| **日常考勤及值日** | 8' +2' | 考勤缺席一次扣1分，值日由每天下午的助教检查，不合格的当天值日小组均扣1-2分，当天应参与值日但未参加的小组扣2'。 |
+| **实验报告**       | 30'    | 电子版报告由班长汇总后提交至majian990520@163.com，格式为：姓名+学号；纸质版由班长收齐后交至行政楼425；纸质与电子版报告需于11月30日17：00前提交。 |
+| **实际测评**       | 60'    | 100分制占比60%：键盘控制小乌龟运动10；键盘控制小车运动及效果28；小车地图构建效果50；其他拓展加分项（12+超出算加分） |
+| **附加题：无人机** | 10'    | 完成附加题的小组在考核分数基础上再加10分（总分超过100分按100分计），参与但未完成附加题的小组酌情加分 |
 
-日常考勤+值日：8‘ +2‘
-（考勤缺席一次扣1分，值日由每天下午的助教检查，不合格的当天值日小组均扣1-2分，当天应参与值
-日但未参加的小组扣2’）
-
-**实验报告：30’**
-（电子版报告由班长汇总后提交至majian990520@163.com，格式为：姓名+学号；纸质版由班长收齐
-后交至行政楼425；纸质与电子版报告需于11月30日17：00前提交）
-
-**实际测评：60‘** 
-
-100分制占比60%：键盘控制小乌龟运动10；键盘控制小车运动及效果28；小车地图构建效果50；其他拓展加分项（12+超出算加分）
-
-其他拓展加分项说明：
+**其他拓展加分项说明：**
 
 - 对于本课程文档的改善有突出贡献；
 - 对于本课程内容有某个方面有较深刻理解，包括：对于底层控制代码原理理解清楚；对于整个系统的流程有较深刻把握；对于树莓派端代码的功能实现理解全面清晰；
@@ -45,13 +46,9 @@
 
 考核完成后将小车拆除，并填写表格，由助教进行查验（此项为扣分制）
 
-**附加题：无人机**
+**附加题说明：**
 
-本课程主要进行智能小车的搭建，但同时为学有余力的小组额外提供了无人机组装教学，具体如下：
-附加题加分规则：完成附加题的小组在考核分数基础上再加10分（总分超过100分按100分计），参与但
-未完成附加题的小组酌情加分
-附加题参与资格：19号下午的助教会进行一次提前批次考核，完成小车搭建的小组可参与本次考核，最
-终遴选出四组队伍参与附加题。
+本课程主要进行智能小车的搭建，但同时为学有余力的小组额外提供了无人机组装教学。附加题参与资格：19号下午的助教会进行一次提前批次考核，完成小车搭建的小组可参与本次考核，最终遴选出四组队伍参与附加题。
 
 ### 1 智能车研究背景
 
@@ -211,7 +208,7 @@ Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI)是�
 
 ```shell
 Your name:rikirobot
-Your computer's name:rikirobot-desktop
+Your computer's name:rikirobot
 Pick a username:rikirobot
 Choose a password:1
 Confirm your password:1
@@ -263,7 +260,7 @@ sudo rm -rf /var/lib/dpkg/lock
 
 ##### 2.2.3 切换系统源
 
-使用鱼香ROS一键切换系统源
+使用鱼香ROS一键切换系统源，按照提示更换系统源
 
 ```
 wget http://fishros.com/install -O fishros && . fishros
@@ -271,10 +268,143 @@ wget http://fishros.com/install -O fishros && . fishros
 
 ##### 2.2.4 安装ROS
 
-使用鱼香ROS一键安装ROS
+使用鱼香ROS一键安装ROS，按照提示安装ros1（kinetic）
 
 ```
 wget http://fishros.com/install -O fishros && . fishros
+```
+
+
+#### 2.3  git rep and catkin_make
+
+##### 2.3.1 安装git与下载源码
+
+```
+sudo apt-get install git
+```
+
+下载源码或者将课程资源中的rikirobot.zip拷贝到树莓派并邮件提取到此处
+
+```
+git clone https://github.com/haohaoalt/rikirobot.git
+```
+
+##### 2.3.2 更改文件权限与安装依赖
+
+赋予installpackage.sh文件权限
+
+```
+cd /home/rikirobot/rules
+chmod 777 -R ~/catkin_ws/src/ 
+chmod +x installpackage.sh
+```
+
+安装依赖
+
+```
+cd rikirobot/rules
+./installpackage.sh
+cd ..
+```
+
+##### 2.3.3 编译准备及编译源码
+
+为了防止树莓派编译卡死,更改部分系统参数确保编译成功
+
+第一步：确保系统中有足够的空间来用做swap交换空间，我准备在一个独立的文件系统中添加一个swap交换文件，在/opt/image中添加2G的swap交换文件
+
+```
+sudo mkdir image
+sudo touch swap
+```
+
+ 第二步：添加交换文件并设置其大小为2G，使用如下命令
+
+```
+sudo dd if=/dev/zero of=/opt/image/swap bs=1024 count=2048000
+```
+
+ 过段时间就返回如下结果：
+
+ ```
+2048000+0 records in
+2048000+0 records out
+2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB/s
+ ```
+
+第三步：创建（设置）交换空间，使用命令mkswap
+
+```
+sudo mkswap /opt/image/swap
+```
+
+出现：
+
+Setting up swapspace version 1, size = 2 GiB (2097147904 bytes)
+no label, UUID=ae7cd3ce-62ef-49b0-831e-3447b5091bcd
+
+第四步：检查现有的交换空间大小，使用命令free
+
+```
+free -m
+              total        used        free      shared  buff/cache   available
+Mem:            925         185          28          14         711         660
+Swap:             0           0           0
+```
+
+或者检查meminfo文件
+
+```
+grep SwapTotal  /proc/meminfo
+```
+
+第五步：启动新增加的2G的交换空间，使用命令swapon
+
+```
+sudo swapon /opt/image/swap
+```
+
+出现：swapon: /opt/image/swap: insecure permissions 0644, 0600 suggested.
+
+第六步:确认新增加的2G交换空间已经生效，使用命令free
+
+```
+free -m
+             total        used        free      shared  buff/cache   available
+Mem:            925         328          56          32         541         502
+Swap:          1999           0        1999
+```
+
+或者检查meminfo文件
+
+```
+grep SwapTotal  /proc/meminfo
+```
+
+第七步：修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效
+
+```cpp
+sudo gedit /etc/fstab
+/*
+在打开文件最后一行添加 
+/opt/image/swap   /swap   swap  defaults 0  0
+*/
+```
+
+将树莓派端系统时间改为现在的时间，否则编译可能出错。
+注意：这一步树莓派必须是联网的，否则编译会出错(联网后时间一般会自动校准)，
+树莓派没有电池，断电后无法保存时间。树莓派默认安装了NTP(Network Time Protocol)服务来获取互联网上ntp服务器提供的时间。
+
+```js
+sudo apt-get install ntp  //安装ntp服务
+sudo service ntp restart  //重启ntp服务
+```
+
+打开新的终端
+
+```js
+cd /home/rikirobot/catkin_ws
+catkin_make -j1
 ```
 
 ### 3 Windows + 虚拟机安装及设置
@@ -723,6 +853,8 @@ https://blog.csdn.net/AndesStay/article/details/82143515
 
 - Ubuntu快速上手指南（想给Ubuntu系统安装一些常用软件）
 
+https://www.bilibili.com/video/BV1TE411A7TT/?spm_id_from=333.337.search-card.all.click&vd_source=968f7130c55722e3f43294e4083f9781
+
 https://blog.csdn.net/u014630636/article/details/51996498
 
 - windows下安装虚拟机+ Ubuntu的详细过程
@@ -841,120 +973,6 @@ sudo rm /var/cache/apt/archives/lock
 Ubuntu install of ROS Kinetic
 
 http://wiki.ros.org/kinetic/Installation/Ubuntu
-# rikirobot tutorial
-## 01 change mirros and install ros
-更换系统源
-```
-wget http://fishros.com/install -O fishros && . fishros
-```
-一键安装ROS
-```
-wget http://fishros.com/install -O fishros && . fishros
-```
-
-
-## 02 git rep and catkin_make
-安装git
-```
-sudo apt-get install git
-```
-
-下载源码
-
-```
-git clone https://github.com/haohaoalt/rikirobot.git
-```
-更改文件权限
-```
-cd /home/rikirobot/rules
-chmod 777 -R ~/catkin_ws/src/ 
-chmod +x installpackage.sh
-```
-安装依赖
-```
-cd rikirobot/rules
-./installpackage.sh
-cd ..
-```
-
-为了防止树莓派编译卡死,更改部分系统参数确保编译成功
-
-第一步：确保系统中有足够的空间来用做swap交换空间，我准备在一个独立的文件系统中添加一个swap交换文件，在/opt/image中添加2G的swap交换文件
-```
-sudo mkdir image
-sudo touch swap
-```
- 第二步：添加交换文件并设置其大小为2G，使用如下命令
-```
-sudo dd if=/dev/zero of=/opt/image/swap bs=1024 count=2048000
-```
- 过段时间就返回如下结果：
- ```
-2048000+0 records in
-2048000+0 records out
-2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB/s
-```
-第三步：创建（设置）交换空间，使用命令mkswap
-```
-sudo mkswap /opt/image/swap
-```
-Setting up swapspace version 1, size = 2 GiB (2097147904 bytes)
-
-第四步：检查现有的交换空间大小，使用命令free
-```
-free -m
-              total        used        free      shared  buff/cache   available
-Mem:            925         185          28          14         711         660
-Swap:             0           0           0
-```
-或者检查meminfo文件
-```
-grep SwapTotal  /proc/meminfo
-```
-第五步：启动新增加的2G的交换空间，使用命令swapon
-```
-sudo swapon /opt/image/swap
-```
-第六步:确认新增加的2G交换空间已经生效，使用命令free
-```
-free -m
-             total        used        free      shared  buff/cache   available
-Mem:            925         328          56          32         541         502
-Swap:          1999           0        1999
-```
-或者检查meminfo文件
-```
-grep SwapTotal  /proc/meminfo
-```
-第七步：修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效
-```cpp
-sudo gedit /etc/fstab
-/*
-在打开文件最后一行添加 
-/opt/image/swap   /swap   swap  defaults 0  0
-*/
-```
-将树莓派端系统时间改为现在的时间，否则编译可能出错。
-注意：这一步树莓派必须是联网的，否则编译会出错(联网后时间一般会自动校准)，
-树莓派没有电池，断电后无法保存时间。树莓派默认安装了NTP(Network Time Protocol)服务来获取互联网上ntp服务器提供的时间。
-```js
-sudo apt-get install ntp  //安装ntp服务
-sudo service ntp restart  //重启ntp服务
-```
-打开新的终端
-```js
-cd /home/rikirobot/catkin_ws
-catkin_make -j1
-```
-
-
-
-
-
-
-
-
-
 
 
 

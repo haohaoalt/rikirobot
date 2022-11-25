@@ -96,7 +96,7 @@ SLAM是Simultaneous Localization and Mapping的缩写，中文译作“同时定
 
 小车的硬件平台架构如下图所示（示意图，本课程主控为树莓派3B）。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108153942908.png" alt="image-20221108153942908" style="zoom:50%;" />
+<img src="./readme.assets//image-20221108153942908.png" alt="image-20221108153942908" style="zoom:50%;" />
 
 传感器数据读取：使用STM32读取里程计信息，控制电机驱动。
 
@@ -122,9 +122,9 @@ SLAM是Simultaneous Localization and Mapping的缩写，中文译作“同时定
 
 #### 1.4 最终效果展示
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108154349361.png" alt="image-20221108154349361" style="zoom:50%;" />
+<img src="./readme.assets//image-20221108154349361.png" alt="image-20221108154349361" style="zoom:50%;" />
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108154402040.png" alt="image-20221108154402040" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108154402040.png" alt="image-20221108154402040" style="zoom:50%;" />
 
 ### 2 智能车树莓派系统盘制作及设置
 
@@ -144,11 +144,11 @@ Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI)是�
 
 树莓派支持Ubuntu系统。本次我们使用的树莓派型号为Raspberry Pi 3 Model B。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108154845100.png" alt="image-20221108154845100" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108154845100.png" alt="image-20221108154845100" style="zoom:50%;" />
 
 右上方两组接口（一共四个），可以用来连接鼠标、键盘等；中间白字HDMI下方接口用来连接显示器；左下方接口供电；右下方接口可以连接网线。这面中间两侧的黑色方块形的装置是已经贴上去的散热装置。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108154855444.png" alt="image-20221108154855444" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108154855444.png" alt="image-20221108154855444" style="zoom:50%;" />
 
 标有白字MICRO SD CARD的右侧部分为SD卡卡槽。金色树莓派标志贴片为已经贴上去的装置。
 
@@ -166,7 +166,7 @@ Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI)是�
 
 第一步：将SD卡放入读卡器中，利用SDFormatter格式化SD卡（新的SD卡无需这一步）。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108155554356.png" alt="image-20221108155554356" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108155554356.png" alt="image-20221108155554356" style="zoom:50%;" />
 
 选中SD卡的盘符➡️格式化➡️完成
 
@@ -178,7 +178,7 @@ Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI)是�
 
 ②点击write——yes便开始写入；
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108155751877.png" alt="image-20221108155751877" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108155751877.png" alt="image-20221108155751877" style="zoom:50%;" />
 
 ③写入完毕后会弹出是否需要格式化，点击取消。
 
@@ -192,17 +192,17 @@ Raspberry Pi(中文名为“树莓派”,简写为RPi，(或者RasPi / RPI)是�
 
 ①选择English语言——I don't want to connect to a wi-fi network right now
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160001240.png" alt="image-20221108160001240" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160001240.png" alt="image-20221108160001240" style="zoom:50%;" />
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160008445.png" alt="image-20221108160008445" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160008445.png" alt="image-20221108160008445" style="zoom:50%;" />
 
 ②地图选择地区shanghai——continue——Engilsh（US）——continue
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160129299.png" alt="image-20221108160129299" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160129299.png" alt="image-20221108160129299" style="zoom:50%;" />
 
 ③键盘布局探测
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160142991.png" alt="image-20221108160142991" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160142991.png" alt="image-20221108160142991" style="zoom:50%;" />
 
 ④方便起见，可将名称密码设置成如下所示：
 
@@ -216,11 +216,11 @@ Confirm your password:1
 
 勾选Log in automatically——continue
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160244402.png" alt="image-20221108160244402" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160244402.png" alt="image-20221108160244402" style="zoom:50%;" />
 
 ⑤等待安装。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160257627.png" alt="image-20221108160257627" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160257627.png" alt="image-20221108160257627" style="zoom:50%;" />
 
 ##### 2.2.2 连接网络
 
@@ -228,7 +228,7 @@ Confirm your password:1
 
 ①连接wifi，如看不到自己的wifi，可以重启看一下
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160351750.png" alt="image-20221108160351750" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160351750.png" alt="image-20221108160351750" style="zoom:50%;" />
 
 ②打开终端，键盘按下 **Ctrl+Alt+t**，也可右击打开终端
 
@@ -240,7 +240,7 @@ sudo apt-get install gedit
 
 使用apt安装gedit。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160532454.png" alt="image-20221108160532454" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108160532454.png" alt="image-20221108160532454" style="zoom:50%;" />
 
 之后会要求输入密码，输入之前设置的1即可（以后也是一样）。
 
@@ -250,7 +250,7 @@ rikirobot@rikirobot-desktop:~$ 行，便说明安装完成（**以后类似询�
 
 **注：**遇到类似报错
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108160805529.png" alt="image-20221108160805529" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108160805529.png" alt="image-20221108160805529" style="zoom:67%;" />
 
 终端输入：
 
@@ -449,19 +449,19 @@ STM32能做什么？
 
 第二步：使用stm32的USB232接口，与电脑端连接。（大概率需要更新驱动）
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162111477.png" alt="image-20221108162111477" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162111477.png" alt="image-20221108162111477" style="zoom:50%;" />
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162118911.png" alt="image-20221108162118911" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162118911.png" alt="image-20221108162118911" style="zoom:67%;" />
 
 第三步：打开FlyMcu软件，选择好单片机的Port：COM15（我这边是COM15）左上角“联机下载时的程序文件”选择好hex文件的地址，左下角选择第四个“**DTR**的低电平复位， **RTS**高电平进BootLoader”。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162212467.png" alt="image-20221108162212467" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162212467.png" alt="image-20221108162212467" style="zoom:67%;" />
 
 第四步：点击开始编程，待烧录完成后拔下电脑端的USB接口，将其与树莓派连接即可。
 
 烧录程序至此结束。接着需要搭建好小车硬件模型并完成各个模块的接线。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162236488.png" alt="image-20221108162236488" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162236488.png" alt="image-20221108162236488" style="zoom:67%;" />
 
 ### 5 硬件搭建与接线
 
@@ -475,53 +475,53 @@ STM32能做什么？
 
 底盘的大致布局如图所示，以树莓派和驱动1一侧为正方向。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162331045.png" alt="image-20221108162331045" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162331045.png" alt="image-20221108162331045" style="zoom:67%;" />
 
 两个轮胎和电机编码器套装如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162403783.png" alt="image-20221108162403783" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162403783.png" alt="image-20221108162403783" style="zoom:67%;" />
 
 STM32（左）和IMU（右）如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162428688.png" alt="image-20221108162428688" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162428688.png" alt="image-20221108162428688" style="zoom:50%;" />
 
 杜邦线如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162448428.png" alt="image-20221108162448428" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108162448428.png" alt="image-20221108162448428" style="zoom:67%;" />
 
 电机稳压模块如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162503672.png" alt="image-20221108162503672" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162503672.png" alt="image-20221108162503672" style="zoom:50%;" />
 
 电机驱动与面包板如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162523372.png" alt="image-20221108162523372" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162523372.png" alt="image-20221108162523372" style="zoom:50%;" />
 
 #### 5.2 硬件安装流程
 
 ①固定轮胎与电机套装。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162631761.png" alt="image-20221108162631761" style="zoom: 50%;" />
+<img src="./readme.assets/image-20221108162631761.png" alt="image-20221108162631761" style="zoom: 50%;" />
 
 ②将电机的编码器接线按照对应的颜色延长。
 
 延长时，红白线需要最终引出杜邦线的公头，其余的蓝黑黄绿需要最终引出杜邦线的母头。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162711963.png" alt="image-20221108162711963" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162711963.png" alt="image-20221108162711963" style="zoom:50%;" />
 
 ③固定辅助轮。
 
 ④稳压模块安装。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162732700.png" alt="image-20221108162732700" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162732700.png" alt="image-20221108162732700" style="zoom:50%;" />
 
 由于**树莓派需要5V**的供电，但是使用的电源是12V的，需要降压为5V。用杜邦线在该模块input端，引出正负端，并串联一个小开关，最后与电源配件（和电源配套的接线头，用于连接电源）相连接。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162828980.png" alt="image-20221108162828980" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162828980.png" alt="image-20221108162828980" style="zoom:50%;" />
 
 完成后，接入电源，打开开关，显示屏如果没有亮，可以按一下输入端侧的黑色按钮，就会显示输入的电压值，按一下另一侧的黑色按钮，便可以将显示改为输出端的电压值。我们需要将输出电压调节为5V，通过逆时针旋转稳压模块的电位器（蓝色的，用一字小螺丝刀旋转，刚开始需要旋转较多圈数才有反应），将输出电压调节为5V即可，然后合上开关。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162929397.png" alt="image-20221108162929397" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162929397.png" alt="image-20221108162929397" style="zoom:50%;" />
 
 稳压模块的输出端，正负分别用公母头的杜邦线引出，公头与稳压模块连接，母头用于接入树莓派进行供电。
 
@@ -529,17 +529,17 @@ STM32（左）和IMU（右）如图所示。
 
 将之前稳压模块输出端引出的正极接入树莓派最右侧引脚（两排引脚的右侧那一排）的上方第一个接口，负极接入最右侧的上方第三个接口。注意千万不能接错！
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108162951089.png" alt="image-20221108162951089" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108162951089.png" alt="image-20221108162951089" style="zoom:50%;" />
 
 ⑥先观察驱动芯片的背部引脚，画出对应的引脚图以方便后续的接线。
 
 将驱动插入面包板，然后固定。面包板以中间的凹槽为分界，左右两边的每一排（排指的是每排五个的排）是导通的。右轮电机的红白线分别接到驱动的AO1、AO2，左轮电机的红白分别接到驱动的BO2、BO1。VM和同VM相邻的GND接口，需要使用12V的电源进行供电。找到之前稳压模块使用的电源配件接口，在原有引出的线的基础上，再分别从正负端引出杜邦线，并串联接入一个小开关，然后接入驱动的VM和GND接口（正端接入VM，负端接入GND）。使得在电源接口接入电源后，能够分两路进行供电，一路给稳压模块，一路给驱动。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108163007593.png" alt="image-20221108163007593" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108163007593.png" alt="image-20221108163007593" style="zoom:50%;" />
 
 ⑦用长铜柱架起，固定STM32单片机。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108163026476.png" alt="image-20221108163026476" style="zoom:50%;" />
+<img src="./readme.assets/image-20221108163026476.png" alt="image-20221108163026476" style="zoom:50%;" />
 
 用USB接线从树莓派引出，然后接到STM32的USB232进行供电。
 
@@ -553,11 +553,11 @@ STM32（左）和IMU（右）如图所示。
 
 接着开始IMU的接线，一共有8个接口，只需接出四个接口。把IMU螺丝孔对面的接口作为第一个接口，然后依次为2、3、4、5。使用母母头的杜邦线，2号口接STM32的3V3、3号口接GND、4号口接PB8、5号口接PB9。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108163048472.png" alt="image-20221108163048472" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108163048472.png" alt="image-20221108163048472" style="zoom:67%;" />
 
 ⑨使用四根长铜柱，在原有底盘的基础上架起第二层，用于安装固定雷达（雷达需提前固定、雷达突出的方向为正方向）。固定后，用USB接口将雷达与树莓派连接即可。（雷达可先不接，待前面全部调试成功后再接入）
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108163106561.png" alt="image-20221108163106561" style="zoom:80%;" />
+<img src="./readme.assets/image-20221108163106561.png" alt="image-20221108163106561" style="zoom:80%;" />
 
 ### 6 智能车调试
 
@@ -650,7 +650,7 @@ rosrun turtlesim turtlesim_node
 rosrun turtlesim turtle_teleop_key
 ```
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108164154357.png" alt="image-20221108164154357" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108164154357.png" alt="image-20221108164154357" style="zoom:67%;" />
 
 电脑端终端输入：
 
@@ -713,7 +713,7 @@ rostopic echo /imu/data
 
 进行查看，可按ctrl+C暂停，观察是否满足图中所述。满足的话关闭所有终端。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221108164714832.png" alt="image-20221108164714832" style="zoom:67%;" />
+<img src="./readme.assets/image-20221108164714832.png" alt="image-20221108164714832" style="zoom:67%;" />
 
 ##### 6.3.2 线速度校正
 
@@ -807,7 +807,7 @@ roslaunch rikirobot auto_slam.launch
 
 **rviz** 打开rviz可视化界面，如图所示。
 
-<img src="./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/clip_image002.jpg" alt="img" style="zoom:67%;" />
+<img src="./readme.assets/clip_image002.jpg" alt="img" style="zoom:67%;" />
 
 在 RVIZ 的 file 中加载 ：（需将下列地址的**auto_slam.rviz****文件**复制出来到电脑端）
 
@@ -865,36 +865,36 @@ https://blog.csdn.net/u012611644/article/details/80728806
 
 | **示意图**                                                   | **介绍**                                                     |                         **购买链接**                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | :----------------------------------------------------------: |
-| ![image-20221110214130099](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214130099.png) | 带霍尔编码器电机，最大载重9KG，25GA370电机编码器。  12v 620rad/min ,330rad/min  根据载重及需要的速度选择。 | https://item.taobao.com/item.htm?spm=a230r.1.14.20.4a8966187RqiPv&id=533000737918&ns=1&abbucket=3#detail |
-| ![image-20221110214212368](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214212368.png) | 树莓派做上位机主控，安装Linux系统  树莓派3b 裸板。           | https://item.taobao.com/item.htm?spm=a230r.1.14.55.688a264ai8w1DP&id=527576110046&ns=1&abbucket=3#detail |
-| ![image-20221110214222753](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214222753.png) | 思岚RPLIDAR  A1/A2/A3。                                      | https://item.taobao.com/item.htm?spm=a230r.1.14.106.1e53783du1gLjW&id=579103092794&ns=1&abbucket=4#detail |
-| ![image-20221110214234921](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214234921.png) | 亚克力板，需要提供CAD图纸。                                  | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=566342606667&_u=c1i889gs6868 |
-| ![image-20221110214246070](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214246070.png) | TF卡，用于扩展树莓派存储空间。                               | https://detail.tmall.com/item.htm?id=23788884293&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs65GY-85d0 |
-| ![image-20221110214256082](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214256082.png) | GY-85 九轴 IMU传感器。                                       | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=561228177874&_u=c1i889gs4714 |
-| ![image-20221110214307286](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214307286.png) | STM32F103单片机用来做底层控制器，需要一键下载功能。          | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=561032538586&_u=c1i889gs34a3 |
-| ![image-20221110214325808](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214325808.png) | 12V 供电。                                                   | https://detail.tmall.com/item.htm?id=520111996213&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs696a |
-| ![image-20221110214337243](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110214337243.png) | 稳压模块，将12V电压降压成5V给树莓派供电。                    | https://detail.tmall.com/item.htm?id=574354676817&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs15f7 |
-| ![image-20221110220351036](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220351036.png) | 万向轮，用于辅助平衡。1.25寸。                               | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=583384136909&_u=c1i889gsaed4 |
-| ![image-20221110220405126](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220405126.png) | 电机驱动，控制正反转等。                                     | https://detail.tmall.com/item.htm?id=557687336997&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs70cc |
-| ![image-20221110220416911](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220416911.png) | 用于配合驱动使用。                                           | https://detail.tmall.com/item.htm?id=581367851046&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs51f8 |
-| ![image-20221110220425733](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220425733.png) | 树莓派散热                                                   | https://detail.tmall.com/item.htm?id=576024492597&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gsa97f |
-| ![image-20221110220438230](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220438230.png) | 用于架起部分模块和第二层底盘。  M3* 4+ 6  M3*10+6  M3*45+ 6  | https://detail.tmall.com/item.htm?id=19634185206&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs21e6 |
-| ![image-20221110220509373](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220509373.png) | 同上。  M3                                                   | https://detail.tmall.com/item.htm?id=42291180887&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gscf70 |
-| ![image-20221110220526630](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220526630.png) | 螺丝  M3*8  M3*10                                            | https://detail.tmall.com/item.htm?id=529652825301&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs2dd4 |
-| ![image-20221110220542358](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220542358.png) | 开关。                                                       | https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.27.364e788fb4yUOj&id=576889063211&skuId=3801554073254&areaId=320500&user_id=2207691322&cat_id=2&is_b=1&rn=8d752cea0f5ca80d33cc864d95773c2e |
-| ![image-20221110220612740](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220612740.png) | 用于连接树莓派与STM32。                                      | https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.2.46ec5a79LGWl6q&id=16184646887&skuId=3960031335855&areaId=320500&user_id=713464357&cat_id=2&is_b=1&rn=ea063e7c64eb923de2c56706ec9afe28 |
-| ![image-20221110220625056](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220625056.png) | 杜邦线15cm，30cm  公公、公母、母母三种型号                   | https://detail.tmall.com/item.htm?id=41254478179&ali_refid=a3_430583_1006:1109983619:N:MsF9mE9KLTC2IibWJh+K1A==:9da2017571e226e04a39097b54542188&ali_trackid=1_9da2017571e226e04a39097b54542188&spm=a230r.1.14.3&skuId=3214771215838 |
-| ![image-20221110220639913](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220639913.png) | 读卡器，用于安装树莓派ubuntu mate系统。                      |         https://item.jd.com/1225383.html#crumb-wrap          |
-| ![image-20221110220714904](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220714904.png) | 绝缘胶，用于延长杜邦线时包住对接处，起绝缘作用。             |            https://item.jd.com/100005803378.html             |
-| ![image-20221110220726411](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/image-20221110220726411.png) | 剥线钳。                                                     |               https://item.jd.com/5821575.html               |
-| ![image-20221125102443182](./readme.assets/image-20221125102443182-1669343263986-1.png) | 一体式键鼠                                                   | https://item.m.jd.com/product/12555096091.html?utm_user=plusmember&gx=RnFlw2cKOzPbndRP--txXX43zTbc89GNnY-g&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends |
+| ![image-20221110214130099](./readme.assets/image-20221110214130099.png) | 带霍尔编码器电机，最大载重9KG，25GA370电机编码器。  12v 620rad/min ,330rad/min  根据载重及需要的速度选择。 | https://item.taobao.com/item.htm?spm=a230r.1.14.20.4a8966187RqiPv&id=533000737918&ns=1&abbucket=3#detail |
+| ![image-20221110214212368](./readme.assets/image-20221110214212368.png) | 树莓派做上位机主控，安装Linux系统  树莓派3b 裸板。           | https://item.taobao.com/item.htm?spm=a230r.1.14.55.688a264ai8w1DP&id=527576110046&ns=1&abbucket=3#detail |
+| ![image-20221110214222753](./readme.assets/image-20221110214222753.png) | 思岚RPLIDAR  A1/A2/A3。                                      | https://item.taobao.com/item.htm?spm=a230r.1.14.106.1e53783du1gLjW&id=579103092794&ns=1&abbucket=4#detail |
+| ![image-20221110214234921](./readme.assets/image-20221110214234921.png) | 亚克力板，需要提供CAD图纸。                                  | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=566342606667&_u=c1i889gs6868 |
+| ![image-20221110214246070](./readme.assets/image-20221110214246070.png) | TF卡，用于扩展树莓派存储空间。                               | https://detail.tmall.com/item.htm?id=23788884293&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs65GY-85d0 |
+| ![image-20221110214256082](./readme.assets/image-20221110214256082.png) | GY-85 九轴 IMU传感器。                                       | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=561228177874&_u=c1i889gs4714 |
+| ![image-20221110214307286](./readme.assets/image-20221110214307286.png) | STM32F103单片机用来做底层控制器，需要一键下载功能。          | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=561032538586&_u=c1i889gs34a3 |
+| ![image-20221110214325808](./readme.assets/image-20221110214325808.png) | 12V 供电。                                                   | https://detail.tmall.com/item.htm?id=520111996213&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs696a |
+| ![image-20221110214337243](./readme.assets/image-20221110214337243.png) | 稳压模块，将12V电压降压成5V给树莓派供电。                    | https://detail.tmall.com/item.htm?id=574354676817&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs15f7 |
+| ![image-20221110220351036](./readme.assets/image-20221110220351036.png) | 万向轮，用于辅助平衡。1.25寸。                               | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.67002e8dnNCjMm&id=583384136909&_u=c1i889gsaed4 |
+| ![image-20221110220405126](./readme.assets/image-20221110220405126.png) | 电机驱动，控制正反转等。                                     | https://detail.tmall.com/item.htm?id=557687336997&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs70cc |
+| ![image-20221110220416911](./readme.assets/image-20221110220416911.png) | 用于配合驱动使用。                                           | https://detail.tmall.com/item.htm?id=581367851046&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs51f8 |
+| ![image-20221110220425733](./readme.assets/image-20221110220425733.png) | 树莓派散热                                                   | https://detail.tmall.com/item.htm?id=576024492597&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gsa97f |
+| ![image-20221110220438230](./readme.assets/image-20221110220438230.png) | 用于架起部分模块和第二层底盘。  M3* 4+ 6  M3*10+6  M3*45+ 6  | https://detail.tmall.com/item.htm?id=19634185206&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs21e6 |
+| ![image-20221110220509373](./readme.assets/image-20221110220509373.png) | 同上。  M3                                                   | https://detail.tmall.com/item.htm?id=42291180887&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gscf70 |
+| ![image-20221110220526630](./readme.assets/image-20221110220526630.png) | 螺丝  M3*8  M3*10                                            | https://detail.tmall.com/item.htm?id=529652825301&spm=a1z09.2.0.0.67002e8dnNCjMm&_u=c1i889gs2dd4 |
+| ![image-20221110220542358](./readme.assets/image-20221110220542358.png) | 开关。                                                       | https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.27.364e788fb4yUOj&id=576889063211&skuId=3801554073254&areaId=320500&user_id=2207691322&cat_id=2&is_b=1&rn=8d752cea0f5ca80d33cc864d95773c2e |
+| ![image-20221110220612740](./readme.assets/image-20221110220612740.png) | 用于连接树莓派与STM32。                                      | https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.2.46ec5a79LGWl6q&id=16184646887&skuId=3960031335855&areaId=320500&user_id=713464357&cat_id=2&is_b=1&rn=ea063e7c64eb923de2c56706ec9afe28 |
+| ![image-20221110220625056](./readme.assets/image-20221110220625056.png) | 杜邦线15cm，30cm  公公、公母、母母三种型号                   | https://detail.tmall.com/item.htm?id=41254478179&ali_refid=a3_430583_1006:1109983619:N:MsF9mE9KLTC2IibWJh+K1A==:9da2017571e226e04a39097b54542188&ali_trackid=1_9da2017571e226e04a39097b54542188&spm=a230r.1.14.3&skuId=3214771215838 |
+| ![image-20221110220639913](./readme.assets/image-20221110220639913.png) | 读卡器，用于安装树莓派ubuntu mate系统。                      |         https://item.jd.com/1225383.html#crumb-wrap          |
+| ![image-20221110220714904](./readme.assets/image-20221110220714904.png) | 绝缘胶，用于延长杜邦线时包住对接处，起绝缘作用。             |            https://item.jd.com/100005803378.html             |
+| ![image-20221110220726411](./readme.assets/image-20221110220726411.png) | 剥线钳。                                                     |               https://item.jd.com/5821575.html               |
+| ![image-20221125102443182](./readme.assets/image-20221125102443182.png) | 一体式键鼠                                                   | https://item.m.jd.com/product/12555096091.html?utm_user=plusmember&gx=RnFlw2cKOzPbndRP--txXX43zTbc89GNnY-g&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends |
 | ![image-20221125103330907](./readme.assets/image-20221125103330907.png) | 便携式显示模块                                               | 【淘宝】https://m.tb.cn/h.UgVfxmf?tk=8vc1d1X8xuS CZ0001 「CFORCE便携显示器15.6英寸4K副屏OLED扩展144Hz外接Switch显示屏」 |
 
 #### 附录3：常见问题自查
 
 问题1：
 
-![IMG_256](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/clip_image002.gif)
+![IMG_256](./readme.assets/clip_image002.gif)
 
 参考方法：
 
@@ -951,7 +951,7 @@ Ubuntu下怎么退出vim编辑器
 
 问题6：
 
-![IMG_256](./%E7%A7%91%E7%A0%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%202022.assets/clip_image004.gif)
+![IMG_256](./readme.assets/clip_image004.gif)
 
 参考方法：
 

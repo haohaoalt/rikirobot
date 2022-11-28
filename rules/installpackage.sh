@@ -37,7 +37,7 @@ sudo apt-get install -y mini-httpd
 sudo apt-get install -y ros-$ver\-roslint
 sudo apt-get install -y ros-$ver\-rosserial
 sudo apt-get install -y ros-$ver\-gmapping
-sudo apt-get install -y ros-$ver\-navigation
+sudo apt-get install -y ros-$ver\-navigation*
 sudo apt-get install -y ros-$ver\-map-server
 sudo apt-get install -y ros-$ver\-rgbd-launch
 sudo apt-get install -y ros-$ver\-costmap-2d
@@ -51,7 +51,7 @@ sudo apt-get install -y ros-$ver\-rosbridge-suite
 sudo apt-get install -y ros-$ver\-robot-pose-publisher
 sudo apt-get install -y ros-$ver\-tf2-web-republisher
 sudo apt-get install -y ros-$ver\-web-video-server
-sudo apt-get install ros-kinetic-move-base
+sudo apt-get install ros-kinetic-move-base*
 sudo apt-get install ros-kinetic-imu-complementary-filter
 sudo apt-get install ros-kinetic-amcl
 sudo apt-get install ros-kinetic-frontier-exploration

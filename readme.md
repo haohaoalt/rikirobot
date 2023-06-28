@@ -288,26 +288,26 @@ wget http://fishros.com/install -O fishros && . fishros
 sudo apt-get install git
 ```
 
-下载源码或者将课程资源中的rikirobot.zip拷贝到树莓派并邮件提取到此处
+将课程资源中的rikirobot.zip拷贝到树莓派并右键提取到此处（或者使用git下载源码）
 
 ```
 git clone https://github.com/haohaoalt/rikirobot.git
 ```
+最终会在主目录看到rikirobot文件夹。
 
 ##### 2.3.2 更改文件权限与安装依赖
 
 赋予installpackage.sh文件权限
 
 ```
-cd /home/rikirobot/rules
-chmod 777 -R ~/catkin_ws/src/ 
+cd /home/rikirobot/rikirobot/rules
+chmod 777 -R ../src/
 chmod +x installpackage.sh
 ```
 
 安装依赖
 
 ```
-cd rikirobot/rules
 ./installpackage.sh
 cd ..
 ```

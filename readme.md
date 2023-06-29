@@ -620,19 +620,18 @@ sudo gedit /etc/hosts
 
 然后保存并关闭
 
-继续在连接到树莓派的终端输入：
-
-```shell
+继续在连接到树莓派的终端输入hostname，看到输出的名字为：xxx
+编辑.bashrc文件
+```
 sudo gedit .bashrc
 ```
-
 在打开的文档末尾加上：
 
 ```
-export ROS_MASTER_URI=http://****笔记本的名称****:11311
+export ROS_MASTER_URI=http://xxx:11311
 ```
 
-(例如) export ROS_MASTER_URI=http://my-pc:11311
+
 
 然后保存并关闭文档。
 

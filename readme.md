@@ -275,6 +275,14 @@ wget http://fishros.com/install -O fishros && . fishros
 ```
 wget http://fishros.com/install -O fishros && . fishros
 ```
+判断是否成功安装ROS
+```
+roscore
+rosrun turtlesim turtlesim_node
+rosrun turtlesim turtle_teleop_key
+```
+
+<img src="./readme.assets/image-20221108164154357.png" alt="image-20221108164154357" style="zoom:67%;" />
 
 
 #### 2.3  git rep and catkin_make
@@ -284,8 +292,7 @@ wget http://fishros.com/install -O fishros && . fishros
 ```
 sudo apt-get install git
 ```
-
-将课程资源中的rikirobot.zip拷贝到树莓派并右键提取到此处（或者使用git下载源码）
+将课程资源中的rikirobot.zip自行拷贝到树莓派主目录并右键提取到此处（或者使用git下载源码）
 
 ```
 git clone https://github.com/haohaoalt/rikirobot.git
@@ -298,7 +305,7 @@ git clone https://github.com/haohaoalt/rikirobot.git
 
 ```
 cd /home/rikirobot/rikirobot/rules
-chmod 777 -R ../src/
+chmod 777 -R ../catkin_ws/src/
 chmod +x installpackage.sh
 ```
 
@@ -420,10 +427,35 @@ catkin_make -j1
 具体可见安装双系统.pdf
 
 #### 3.3 虚拟机安装Ubuntu（推荐）
+==网络连接方式选择桥接模式==
 
 具体可见安装虚拟机与ubuntu.pdf
+虚拟机需要安装ROS1
+使用鱼香ROS一键切换系统源，按照提示更换系统源
 
-==网络连接方式选择桥接模式==
+```
+wget http://fishros.com/install -O fishros && . fishros
+```
+
+
+##### 2.2.4 安装ROS
+
+使用鱼香ROS一键安装ROS，按照提示安装ros1（kinetic）
+
+```
+wget http://fishros.com/install -O fishros && . fishros
+```
+
+判断是否成功安装ROS
+```
+roscore
+rosrun turtlesim turtlesim_node
+rosrun turtlesim turtle_teleop_key
+```
+
+<img src="./readme.assets/image-20221108164154357.png" alt="image-20221108164154357" style="zoom:67%;" />
+
+
 
 ### 4 烧录STM32程序
 

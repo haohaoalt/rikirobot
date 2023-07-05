@@ -1,12 +1,4 @@
-sudo cp 58-riki.rules /etc/udev/rules.d/
-sudo cp 558-orbbec-usb.rules /etc/udev/rules.d/
-sudo cp 10-local-rpi.rules /etc/udev/rules.d/
-sudo cp 40-scratch.rules /etc/udev/rules.d/
-sudo cp 49-teensy.rules /etc/udev/rules.d/
-sudo cp 60-flashgo.rules /etc/udev/rules.d/
-sudo cp 99-com.rules /etc/udev/rules.d/
-sudo cp name.rules /etc/udev/rules.d/
-sudo cp primesense-usb.rules /etc/udev/rules.d/
+sudo cp *.rules /etc/udev/rules.d/
 
 sudo apt-get update
 
@@ -51,13 +43,13 @@ sudo apt-get install -y ros-$ver\-rosbridge-suite
 sudo apt-get install -y ros-$ver\-robot-pose-publisher
 sudo apt-get install -y ros-$ver\-tf2-web-republisher
 sudo apt-get install -y ros-$ver\-web-video-server
-sudo apt-get install ros-kinetic-move-base*
-sudo apt-get install ros-kinetic-imu-complementary-filter
-sudo apt-get install ros-kinetic-amcl
-sudo apt-get install ros-kinetic-frontier-exploration
-sudo apt-get install ros-kinetic-hector-slam
+sudo apt-get install -y ros-$ver\-move-base*
+sudo apt-get install -y ros-$ver\-imu-complementary-filter
+sudo apt-get install -y ros-$ver\-amcl
+sudo apt-get install -y ros-$ver\-frontier-exploration
+sudo apt-get install -y ros-$ver\-hector-slam
 
-echo "source ~/rikirobot/catkin_ws/devel/setup.bash" >> ~/.bashrc
+echo "source ~/rikirobot/rikirobot/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo usermod -aG dialout $USER

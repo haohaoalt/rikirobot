@@ -13,18 +13,14 @@ echo "sudo rm -rf ~/.platformio/"
 ver=$(rosversion -d)
 sudo apt-get install libusb-dev
 sudo apt-get install libspnav-dev
-sudo apt-get install libbluetooth3=5.37-0ubuntu5.3
-sudo apt-get install libbluetooth-dev
 sudo apt-get install libcwiid-dev
 sudo apt-get install git 
 sudo apt-get install vim
-echo "sudo pip install pybluez"
 sudo apt-get install -y libv4l-dev 
 sudo apt-get install -y build-essential
 sudo apt-get install -y chrony
 sudo apt-get install -y libbullet-dev 
 sudo apt-get install -y libudev-dev
-sudo apt-get install -y libusb-dev
 sudo apt-get install -y mini-httpd
 sudo apt-get install -y ros-$ver\-roslint
 sudo apt-get install -y ros-$ver\-rosserial
@@ -49,7 +45,7 @@ sudo apt-get install -y ros-$ver\-amcl
 sudo apt-get install -y ros-$ver\-frontier-exploration
 sudo apt-get install -y ros-$ver\-hector-slam
 
-echo "source ~/rikirobot/rikirobot/catkin_ws/devel/setup.bash" >> ~/.bashrc
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo usermod -aG dialout $USER

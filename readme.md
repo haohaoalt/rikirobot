@@ -269,6 +269,20 @@ wget http://fishros.com/install -O fishros && . fishros
 ```
 
 ##### 2.2.4 安装ROS
+注意：树莓派系统mate版本中安装ROS使用官网步骤，虚拟机正常ubuntu版本中安装ROS使用鱼香ROS
+
+官网安装链接：http://wiki.ros.org/cn/kinetic/Installation/Ubuntu
+```
+sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt-get update
+sudo apt-get install ros-kinetic-desktop-full
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
 
 使用鱼香ROS一键安装ROS，按照提示安装ros1（kinetic）
 
@@ -787,7 +801,10 @@ rosrun rikirobot_nav calibrate_linear.py
 rosrun rqt_reconfigure rqt_reconfigure
 ```
 
-！！！注意：此时可能会有同学在打开rqt后发现左侧栏空白。依照经验来看着很有可能是因为hosts和bashrc没有准确设置。具体步骤请参照6.2准备工作。简单来说，①笔记本需要在hosts文件中添加树莓派的IP与树莓派的名称②树莓派需要在hosts文件中添加笔记本的IP与笔记本的名称③树莓派的bashrc文件中添加export …的相关信息。
+！！！注意：此时可能会有同学在打开rqt后发现左侧栏空白。依照经验来看着很有可能是因为hosts和bashrc没有准确设置。具体步骤请参照6.2准备工作。简单来说，
+①笔记本需要在hosts文件中添加树莓派的IP与树莓派的名称\
+②树莓派需要在hosts文件中添加笔记本的IP与笔记本的名称\
+③树莓派的bashrc文件中添加export …的相关信息。
 
 打开rqt工具后,左侧选第一项，准备好卷尺，预留两米的长度，将小车摆在卷尺起始处，然后勾选**start_test**，小车就会开始向前。
 

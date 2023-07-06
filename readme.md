@@ -283,6 +283,11 @@ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
+从官网安装ros成功后如果无法rosdep init，可以使用小鱼配置
+输入
+`wget http://fishros.com/install -O fishros && . fishros
+`选择3.一键配置`rosdep`
+成功后再输入`rosdepc update`
 
 使用鱼香ROS一键安装ROS，按照提示安装ros1（kinetic）
 
@@ -850,6 +855,10 @@ source /opt/ros/kinetic/setup.bash
 source ~/rikirobot/catkin_ws/devel/setup.bash
 export RIKIBASE=2wd
 export RIKILIDAR=rplidar
+```
+然后更新一下环境变量
+```
+source .bashrc
 ```
 
 电脑端打开终端ssh连接小车并bringup启动，记得roscore。

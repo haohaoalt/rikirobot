@@ -838,6 +838,19 @@ rosrun rqt_reconfigure rqt_reconfigure
 至此，调试校正完成。关闭所有终端。
 
 ##### 6.3.4 slam建图
+确定主目录隐藏文件.bashrc的正确性
+进入树莓派
+```
+ssh rikirobot@192.168.xxx.xxx
+sudo gedit .bashrc
+```
+确认文件最后的信息,在export ROS_MASTER_URI...后面确认有以下指令：
+```
+source /opt/ros/kinetic/setup.bash
+source ~/rikirobot/catkin_ws/devel/setup.bash
+export RIKIBASE=2wd
+export RIKILIDAR=rplidar
+```
 
 电脑端打开终端ssh连接小车并bringup启动，记得roscore。
 
